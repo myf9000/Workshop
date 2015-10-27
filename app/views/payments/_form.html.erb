@@ -1,0 +1,10 @@
+
+<% if flash[:alert] %>
+<%= flash[:alert] %>
+<% end %>
+<%= simple_form_for @payment do |f| %>
+  <%= f.input :title%>
+  <%= f.input :url%>
+  <%= f.input :app %>
+  <%= f.button :submit %>
+<% end %>

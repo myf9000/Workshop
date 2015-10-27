@@ -1,0 +1,13 @@
+<h3>Payments: </h3>
+<ul>
+<% @payments.each do |f| %>
+	<li><%= f.title%></li>
+	<li><%= f.url%></li>
+	<%= link_to "Show", payment_path(f) %>
+	<%= link_to "Edit", edit_payment_path(f) %>
+	<%= link_to "Destroy", payment_path(f), method: :delete %>
+	<br>
+<% end %>
+</ul>
+
+<%= link_to "New", new_payment_path %>
